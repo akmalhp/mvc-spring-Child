@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+// saving your input data into list
 @Service
 public class InMemoryBookService implements BookService {
 
@@ -17,6 +18,11 @@ public class InMemoryBookService implements BookService {
     @Override
     public List<PrimaryKey> findAll() {
         return new ArrayList<>(booksDB.values());
+    }
+    
+    @Override
+    public void emptyAll() {
+    	booksDB = new HashMap<>();
     }
 
     @Override

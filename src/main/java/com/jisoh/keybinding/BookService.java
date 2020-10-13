@@ -7,5 +7,7 @@ public interface BookService {
 
     List<PrimaryKey> findAll();
 
+    void emptyAll();
+    
     void saveAll(List<PrimaryKey> books);
 }
